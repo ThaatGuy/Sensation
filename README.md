@@ -1,1 +1,10 @@
 # Sensation
+In this project we aim to develop a wearable system to guide the blind around streets, helping them avoid obstacles and get from one place to another. This report outlines a system developed that is strapped onto the users chest. Containing a Jetson Nano that processes the information coming from a camera and a GNSS module. It also provides haptic and audio feedback to guide the user through another extension board that has been developed.
+
+To keep all the components together, a main frame made of acrylic is laser such that the cases and adaptors that are 3D printed can hold the Jetson Nano, battery pack, GNSS module and the camera. Spaces have also been cut such that straps can be attached to go around the chest and neck of the user.
+
+The Jetson Nano uses a camera to capture the the scene and make sense of it to guide the user. To do this, each frame captured by the camera is segmented using cityscapes primarily segmenting out the road and footpaths. Mobilnet-ssd is also used to detect objects such that the user can avoid them. After the implementation the system is able to detect objects well, however is not able to segment the road and the footpath very well as cityscapes was mainly designed to detect the road. A secondary PCB board has also been developed to control 8 vibration motors that attaches to the Jetson Nano, however with the current demo only 3 of them are used and are able to guide the user to move straight, right and left.
+
+To navigate from one location to another the system uses a GNSS module to obtain the users location and the Open-Route-Services API to determine the best route and provide some prior information about the route to optimize the system performance.
+
+For a more detailed description on this project and how to set the system up please refer to the report on this repository. 

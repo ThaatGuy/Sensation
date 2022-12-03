@@ -1,6 +1,6 @@
 Licences
 
-# main.py and segnet_utils.py
+# The following files come under the following copyright notice: main.py and segnet_utils.py 
 
 # Copyright (c) 2019, NVIDIA CORPORATION. All rights reserved.
 #
